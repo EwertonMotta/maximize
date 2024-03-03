@@ -29,3 +29,10 @@ php artisan key:generate
 ```
 Para acessar a aplicação use o endereço ```http://localhost/```
 Para acessar a API use o endereço ```http://localhost:8081/api/```
+
+---
+Para executar os testes automatizados, é necessário acessar o container ```PHP```
+``` shell
+docker exec -it php-fpm bash
+php artisan test
+```
