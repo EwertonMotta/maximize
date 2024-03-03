@@ -1,6 +1,7 @@
 const postContainer = document.getElementById("post");
 const url = "http://localhost:8081/api/post/" + document.URL.split("/").pop();
 const title = document.getElementById("title");
+const tagTitle = document.getElementsByTagName("title")[0];
 
 getPost();
 
@@ -13,6 +14,7 @@ async function getPost() {
 function mountPost(post) {
     postContainer.innerHTML = "";
     title.innerHTML = post.title;
+    tagTitle.innerHTML = post.title + " | Blog | Simetra - Laboratório Veterinário";
     const postElement = document.createElement("div");
     postElement.innerHTML = `
         <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-center">${post.title}</h1>
