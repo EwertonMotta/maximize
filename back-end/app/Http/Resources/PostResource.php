@@ -16,7 +16,7 @@ return [
             'image' => $this->image,
             'description' => $this->description,
             'body' => $this->body,
-            'published_at' => $this->created_at->toDateTimeString(),
+            'published_at' => 'Publicado em ' . $this->created_at->format('d/m/Y \à\s H:i'),
             'url' => '/post/' . $this->slug
         ];
     }
